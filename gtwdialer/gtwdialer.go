@@ -2,13 +2,13 @@
 package main
 
 import (
-	"runtime"
 	"fmt"
 	"os/exec"
+	"runtime"
 )
 
 const (
-	maxThreads = 349	// This should be changed to reflect the maximum for your system
+	maxThreads = 349 // This should be changed to reflect the maximum for your system
 )
 
 type IP struct {
@@ -16,11 +16,11 @@ type IP struct {
 }
 
 func main() {
-	ip := IP{192,168,0,0}
+	ip := IP{192, 168, 0, 0}
 	comm := make(chan *string)
 	var str *string
 
-	for curThreads := 0;curThreads <= maxThreads; curThreads++ {
+	for curThreads := 0; curThreads <= maxThreads; curThreads++ {
 		go ip.Ping(comm)
 		ip.Next()
 	}
@@ -54,7 +54,7 @@ func (ip IP) Ping(c chan *string) {
 // Next advances the IP address specified by i
 func (i *IP) Next() {
 	//Ugly as fuck. Needs to be cleaned
-	if i.c % 5 == 0 && i.d == 0 {
+	if i.c%5 == 0 && i.d == 0 {
 		fmt.Println("Checkin: ", i.ToString())
 	}
 	i.d = i.d + 1

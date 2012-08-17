@@ -6,14 +6,14 @@ import (
 	"time"
 )
 
-func Generate() (string) {
+func Generate() string {
 	var uuid string
 	rand.Seed(time.Now().UnixNano())
 
 	//Look at that nasty ASCII, I need to learn to UTF proper
 	//TODO: Fix this shit
 	for index := 1; index <= 25; index++ {
-		if index % 5 == 0 && index != 25 {
+		if index%5 == 0 && index != 25 {
 			uuid += "-"
 		}
 		uuid += string('A' + (rand.Int() % 26))

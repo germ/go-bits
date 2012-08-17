@@ -4,18 +4,18 @@
 package lf
 
 import (
-	"runtime"
-	"time"
-	"strings"
-	"os"
 	"fmt"
+	"os"
+	"runtime"
+	"strings"
+	"time"
 )
 
 func Log(e error) {
-	if (e != nil) {
+	if e != nil {
 		_, str, line, _ := runtime.Caller(2)
-		i:= strings.LastIndex(str, "/")
-		t:= time.Now()
+		i := strings.LastIndex(str, "/")
+		t := time.Now()
 		fmt.Printf("[FATAL] [%v:%v] [%vh %vm %vs] [%s]\n", str[i+1:], line, t.Hour(), t.Minute(), t.Second(), e)
 		os.Exit(1)
 	}

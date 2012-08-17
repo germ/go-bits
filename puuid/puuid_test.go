@@ -1,8 +1,8 @@
 package puuid
 
 import (
-	"testing"
 	"fmt"
+	"testing"
 )
 
 func Test_Generate(t *testing.T) {
