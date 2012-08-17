@@ -1,0 +1,13 @@
+ ____ ____   Go-Bits: Trivial bits of Go that don't deserve their own repos
+||G |||B ||  
+||__|||__||  Some of this code is better documented then the rest, some of it has 
+|/__\|/__\|  little todos sprinkled through it and other bits have unfixed bugs
+
+ Keep Calm   Rather then let this code sit idle on my disk I've decided to put it online
+  Hack On    in hopes that someone might learn from it. A lot of it is non-idomatic Go as
+   Germ      well.
+
+                      
+
+
+
