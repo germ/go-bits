@@ -15,9 +15,8 @@ func Generate() (string) {
 	for index := 1; index <= 25; index++ {
 		if index % 5 == 0 && index != 25 {
 			uuid += "-"
-		} else {
-			uuid += string('A' + (rand.Int() % 26))
 		}
+		uuid += string('A' + (rand.Int() % 26))
 	}
 
 	return uuid
